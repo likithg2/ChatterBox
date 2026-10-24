@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat from <%=chat.from%></title>
+</head>
+<body>
+    <h1>Chat message of</h1>
+    <h2>From:<%=chat.from%> &nbsp;&nbsp; To:<%=chat.to%></h2>
+    <p>message:<%=chat.message%></p>
+    <p><%=chat.created_at.toString().split(" ")[4]%></p>
+    <p><%=chat.created_at.toString().split(" ").slice(0,4).join(" ")%></p>
+    <%if(chat.updated_at){%>
+        <p>Updated at: <%=chat.updated_at.toString().split(" ").slice(0,5).join(" ")%></p>
+    <%}%>
+</body>
+</html>

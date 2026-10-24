@@ -20,8 +20,12 @@
             <p> <%=chat.message%></p>
         </div>
         <p>Recieved By: <b><i><%=chat.to%></i></b></p>
+
         <form action="/chats/<%=chat.id%>/edit">
             <button>edit message</button>
+        </form>
+        <form action="/chats/<%=chat.id%>" method="get">
+            <button>view message</button>
         </form>
         <form action="/chats/<%=chat.id%>/delete?_method=DELETE" method="post">
             <button>delete message</button>
